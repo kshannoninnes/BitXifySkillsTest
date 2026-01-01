@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="BitXify">
+  <DataContextMoniker Name="/BitXifyDataContext" />
+  <nestedChildShapes>
+    <classShape Id="15044a4e-b87e-4b6c-ac6d-2c3668b4f106" absoluteBounds="4, 3, 2, 1.3862939453125">
+      <DataClassMoniker Name="/BitXifyDataContext/tblProduct" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5a96307e-15fd-4d1c-b8a8-0cffffb5b6c2" absoluteBounds="4.015, 3.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

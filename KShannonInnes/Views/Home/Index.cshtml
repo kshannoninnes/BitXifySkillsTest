@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "All Products";
+}
+
+<main class="container py-3">
+    <h1 class="mb-3">@ViewBag.Title</h1>
+
+    <div class="card mb-3">
+        <div class="card-header text-end">
+            <button id="loadBtn" type="button" class="btn btn-primary">
+                Display All Products
+            </button>
+        </div>
+
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table id="productTable" class="table table-striped table-hover mb-0 table-fixed">
+                    <colgroup>
+                        <col style="width: 75%">
+                        <col style="width: 25%">
+                    </colgroup>
+
+                    <thead class="table-light">
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    document.getElementById("loadBtn").addEventListener("click", function () {
+        fetch("/Product/GetAll")
+            .then(response => response.json())
+            .then(data => {
+                const tbody = document.querySelector("#productTable tbody");
+                tbody.innerHTML = "";
+
+                data.forEach(p => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td>${p.Name}</td>
+                        <td>$${p.Price}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            });
+    });
+</script>
