@@ -1,4 +1,3 @@
 <Solution>
-  <Project Path="KShannonInnes.Tests/KShannonInnes.Tests.csproj" />
   <Project Path="KShannonInnes/KShannonInnes.csproj" />
 </Solution>
